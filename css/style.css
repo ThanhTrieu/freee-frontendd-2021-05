@@ -1,0 +1,130 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+/* reset trinh duyet */
+
+
+/* nhung file demo css vao day */
+@import 'demo.css';
+
+/* tim hieu ve selector css */
+
+/* id selector */
+/* #title {
+  color: yellow;
+} */
+
+/* class selector */
+.title {
+  color: red;
+}
+
+/* HTML selector */
+h1.title {
+  /* color: blue !important; */
+  color: blue;
+}
+/* lam the nao de o input password co mau duong vien khac input kia */
+
+input[type='password'] {
+  border: 2px solid red;
+}
+
+/* so khop - tim kiem 1 trong nhieu gia tri cua thuoc tinh */
+input[class~='user'] {
+  border: 2px solid blue;
+}
+
+/* so khop - tim kiem ky tu cua gia tri nam trong thuoc tinh */
+input[class*='control'] {
+  border: 2px solid yellow;
+}
+
+/* tac dong vao the a facebook cho no co 1 mau rieng biet voi 2 the a con lai */
+/* tim kiem ky tu ket thuc */
+a[href$='.com'] {
+  color: pink;
+}
+/* tim kiem ky tu bat dau */
+a[href^='https'] {
+  color: violet;
+}
+/* gia tri bat dau cua thuoc tinh phai la my, dung dang sau tu my do phai co 1 dau -, dung dang sau dau - do la gi ko can quan tam nua */
+a[class|='my'] {
+  color: yellow;
+}
+
+/* selector phan cap */
+/* biet cau truc van ban HTML duoc trinh bay ra lam sao */
+header.header > div.header__logo + div.header__banner ~ nav.nav h4 {
+  color: red;
+}
+
+/* tu selector phan cap - cac ban bieu dien lai cau truc HTML nhu the nao */
+
+section.content > div.primary + div.second div.third > div.fourth > p.title ~ h5.title {
+  color: red;
+}
+
+/* gom nhom selector css */
+/* h5.title, p.title, h4.title {
+  color: red;
+} */
+/* p.title {
+  color: red;
+}
+h4.title {
+  color: red;
+} */
+
+/* pesudo selector */
+div.pesudo-class > :first-child {
+  color: red;
+}
+/*  tim kiem nhung loai con dau tien */
+div.pesudo-class > :first-of-type {
+  color: blue;
+}
+/* h2-01; p-01;h1-01;h3-01 */
+
+div.pesudo-class > :last-child {
+  color: yellow;
+} 
+
+/* tim kiem nhung loai con cuoi cung */
+div.pesudo-class > :last-of-type {
+  color: violet;
+}
+/* h2-03;p-04;h1-02;h3-02  */
+/* tim kiem phan tu dua vao vi tri no xuat hien */
+div.pesudo-class > :nth-child(3) {
+  color: pink;
+}
+/* p-01 */
+
+/* tim kiem nhung loai con o vi tri so 3 */
+div.pesudo-class > :nth-of-type(3) {
+  color: brown;
+}
+/* h2-03; p-03 */
+
+/* tim kiem thang con cuoi tinh den vi tri so 2 */
+div.pesudo-class > :nth-last-of-type(2) {
+  color: green;
+}
+/* h2-02;p-03;h1-01;h3-01  */
+
+/* ko he tac dong vao the a */
+div.parent :only-child {
+  color: red;
+}
+input[type="email"]:focus {
+  width: 500px;
+  height: 30px;
+}
+input[type="checkbox"]:checked {
+  width: 300px;
+  height: 300px;
+}
