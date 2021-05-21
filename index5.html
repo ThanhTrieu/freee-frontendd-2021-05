@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tong hai so</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href=""> -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <label>number 1</label>
+    <input type="text" id="number_1" value="" />
+    <p id="errNumber_1"></p>
+    <br/>
+    <label>number 2</label>
+    <input type="text" id="number_2" value="" />
+    <p id="errNumber_2"></p>
+    <br/>
+    <button type="button" id="btnSum"> Tinh tong</button>
+    <h3 id="result"></h3>
+
+    <script>
+      // js ngay trong HTML
+      // cach nay han che
+      let sumNumber = document.getElementById('btnSum');
+      sumNumber.onclick = function(){
+        let n1 = document.getElementById('number_1');
+        let n2 = document.getElementById('number_2');
+        let err1 = document.getElementById('errNumber_1');
+        let err2 = document.getElementById('errNumber_2');
+        let result = document.getElementById('result');
+
+        // de cac banj tu kiem tra - validation du lieu dau vao
+        // mac dinh du lieu luon dep - luon la so
+        let valN1 = n1.value;
+        valN1 = parseFloat(valN1);
+
+        let valN2 = n2.value;
+        valN2 = parseFloat(valN2);
+
+        let sum = valN1 + valN2;
+
+        if(!isNaN(sum)){
+          result.innerHTML = `Tong 2 so la : ${sum}`;
+        } else {
+          result.innerHTML = '';
+        }
+      }
+    </script>
+  </body>
+</html>
